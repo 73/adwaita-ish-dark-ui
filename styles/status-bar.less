@@ -6,9 +6,31 @@
 // Displays information about the current editor.
 // Overrides: atom/status-bar
 
+// .status-bar {
+//   font-size: @font-size;
+//   color: @text-color;
+//   border-top: 1px solid @base-border-color;
+//   background-color: @tree-view-background-color;
+// }
+
 .status-bar {
-  font-size: @font-size;
-  color: @text-color;
+  height: 26px;
+  font-size: 80%;
+  background-color: @violet !important;
+  line-height: 2em;
   border-top: 1px solid @base-border-color;
-  background-color: @tree-view-background-color;
+  font-weight: bold;
+}
+
+.status-bar a {
+  color: @notwhite !important;
+
+}
+.status-bar a:hover {
+  color: white !important;
+  background-color: @violet !important;
+}
+
+.status-bar .inline-block {
+  background-color: @violet !important;
 }

@@ -1,0 +1,33 @@
+.scrollbars-visible-always {
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    border: 1px solid #161719;
+    background-color: #6c6c6c;
+    z-index: 10000;
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background-color: @base-background-color;
+  }
+
+  atom-text-editor {
+		::-webkit-scrollbar-track {
+		 	background: @background-color-content;
+		}
+		::-webkit-scrollbar-corner {
+			background: @background-color-content;
+		}
+    // ::-webkit-scrollbar-thumb {
+    //   // 	border-color: @scrollbar-background-color-editor;
+    //   // 	background: @scrollbar-color-editor;
+    //   border-radius: 5px;
+    //   border: 1px solid #161719;
+    //   background-color: #6c6c6c;
+    // }
+	}
+}

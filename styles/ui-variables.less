@@ -1,4 +1,7 @@
 
+@import "syntax-variables";
+.ui-syntax-color() { @syntax-background-color: #101010; } .ui-syntax-color(); // fallback color
+@ui-syntax-color: @syntax-background-color;
 // UI Variables
 // -------------------
 
@@ -11,8 +14,56 @@
 // A good start is to change the color of the `@base-background-color` variable.
 
 
+// Adwaita Dark from Builder
+@blue1:#99c1f1;
+@blue2:#62a0ea;
+@blue3:#3584e4;
+@blue4:#1c71d8;
+@blue5:#1a5fb4;
+@dark1:#77767b;
+@dark2:#5e5c64;
+@dark3:#3d3846;
+@dark4:#241f31;
+@dark5:#000000;
+@green1:#8ff0a4;
+@green2:#57e389;
+@green3:#33d17a;
+@green4:#2ec27e;
+@green5:#26a269;
+@light1:#ffffff;
+@light2:#f6f5f4;
+@light3:#deddda;
+@light4:#c0bfbc;
+@light5:#9a9996;
+@orange1:#ffbe6f;
+@orange2:#ffa348;
+@orange3:#ff7800;
+@orange4:#e66100;
+@orange5:#c64600;
+@purple1:#dc8add;
+@purple2:#c061cb;
+@purple3:#9141ac;
+@purple4:#813d9c;
+@purple5:#613583;
+@red1:#f66151;
+@red2:#ed333b;
+@red3:#e01b24;
+@red4:#c01c28;
+@red5:#a51d2d;
+@yellow1:#f9f06b;
+@yellow2:#f8e45c;
+@yellow3:#f6d32d;
+@yellow4:#f5c211;
+@yellow5:#e5a50a;
+
+
+@cyan: #56b6c2;
+@cyan1: #6ecfcf;
+@cyan2: #13afaf;
+
+
 // Text Colors
-@text-color:           hsl(0,0%,66%);
+@text-color:           hsl(0,0%,94%);
 @text-color-subtle:    hsl(0,0%,50%);
 @text-color-highlight: hsl(0,0%,94%);
 @text-color-selected:  hsl(0,0%,100%);
@@ -28,20 +79,32 @@
 @background-color-warning: hsl(32,   60%, 50%);
 @background-color-error:   hsl(0,    70%, 50%);
 
-@background-color-highlight: lighten(@base-background-color, 5%);
-@background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       darken(@base-background-color, 5%);
+
+@adwaita-dark-blue: #15539e;
+@yellow-signal:     #FFD700;
+@chameleon:         #73d216;
+@red:               #c13f21;
+@lime:              #C9E142;
+@violet:            #67217a;
+@notwhite:          #dddddd;
+
+@background-color-highlight: #373737;
+@background-color-dark:      #2d2d2d;
+@background-color-light:      #353535;
+@background-color-selected:  #1e1e1e;
+@app-background-color:       #343434;
+@background-color-content:  #161616;
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: #282828;
+@base-border-color:     #070707;
 
 // Component colors
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color:     @base-border-color;
 
-@input-background-color: @app-background-color;
-@input-border-color:     @base-border-color;
+@input-background-color: #2d2d2d;
+@input-border-color:     #1b1b1b;
 
 @tool-panel-background-color: @base-background-color;
 @tool-panel-border-color:     @base-border-color;
@@ -55,15 +118,16 @@
 @overlay-background-color: lighten(@base-background-color, 5%);
 @overlay-border-color:     @base-border-color;
 
-@button-background-color:          lighten(@base-background-color, 10%);
-@button-background-color-hover:    lighten(@button-background-color, 12%);
-@button-background-color-selected: @button-background-color-hover;
+@button-background-color:          #333333;
+@button-background-color-hover:    #373737;
+@button-background-color-selected: #1e1e1e;
 @button-border-color:              @base-border-color;
 
 @tab-bar-background-color:    @base-background-color;
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: lighten(@tab-bar-background-color, 10%);
+@tab-background-color-active: #2f2f2f;
+@tab-background-color-hover:  #2b2b2b;
 @tab-border-color:            @base-border-color;
 
 @tree-view-background-color: @base-background-color;
@@ -76,9 +140,13 @@
 @ui-site-color-4: #D831B0;             // pink
 @ui-site-color-5: #EBDD5B;             // yellow
 
+
+@scrollbar-background-color-editor: @ui-syntax-color;
+
+
 // Sizes
-@font-size: 12px;
-@input-font-size: 14px;
+@font-size: 15px;
+@input-font-size: 15px;
 
 @disclosure-arrow-size: 12px;
 
@@ -87,8 +155,11 @@
 @component-icon-size: 16px;
 @component-line-height: 25px;
 
-@tab-height: 30px;
+@tab-height: 36px;
+
+@ui-element-height: 34px;
+@tree-view-item-size: 2.2em;
 
 // Misc
-@component-border-radius: 2px;
-@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@component-border-radius: 4px;
+@font-family: Cantarell, Ubuntu, Inter, sans-serif;

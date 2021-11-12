@@ -3,16 +3,27 @@
 // -------------------
 
 // Mini Editors are the "text inputs" used in find+replace or in the settings.
-
-
 atom-text-editor[mini] {
   padding-left: @component-padding/2;
   color: @text-color;
   border-radius: @component-border-radius;
-  background-color: @input-background-color;
+  // background-color: @input-background-color !important;
+  border: 1px solid @button-border-color !important;
+  height: @ui-element-height;
+  // line-height: 2em;
+
+  max-height: @ui-element-height;
+  min-height: @ui-element-height;
+  font-size: @input-font-size;
+  font-family: @font-family;
 
   &.is-focused {
-    background-color: darken(@input-background-color, 5%);
+    // background-color: darken(@input-background-color, 5%);
+    outline: 3px solid @adwaita-dark-blue !important;
+    color: @text-color;
+    .placeholder-text {
+      color: @text-color;
+    }
   }
 
   .placeholder-text {
@@ -21,4 +32,28 @@ atom-text-editor[mini] {
   .selection .region {
     background-color: @background-color-selected;
   }
+}
+
+
+atom-text-editor .gutter {
+  min-width: auto;
+  background-color: @background-color-content;
+}
+
+// atom-text-editor{
+//     border-radius: @component-border-radius;
+//     // background-color: @input-background-color !important;
+//     border: 1px solid @button-border-color !important;
+//     // outline: 1px solid @button-border-color !important;
+//     outline: 1px solid pink !important;
+// }
+
+.list-tree.has-collapsable-children .list-nested-item.collapsed > .list-item::before {
+  content: "▸";
+  transform: scale(0.8,1.4);
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+  content: "▾";
+  transform: scale(1.4,0.8,);
 }

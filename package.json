@@ -1,13 +1,16 @@
 {
-  "name": "ui-theme-template",
+  "name": "adwaita-ish-dark-ui",
   "theme": "ui",
-  "version": "0.0.0",
-  "description": "A short description of your UI theme",
+  "version": "0.0.1",
+  "description": "A theme to resemble Adwaita Dark",
   "keywords": [
     "ui",
-    "theme"
+    "theme",
+    "Adwaita",
+    "Dark",
+    "GNOME"
   ],
-  "repository": "https://github.com/atom-community/ui-theme-template",
+  "repository": "https://github.com/73/adwaita-ish-dark-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

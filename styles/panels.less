@@ -6,7 +6,7 @@
 
 .panel-heading {
   border-bottom: 1px solid @panel-heading-border-color;
-  background-color: @panel-heading-background-color;
+  background-color: @inset-panel-background-color;
 }
 
 .inset-panel {
@@ -21,7 +21,11 @@
 // Used on top of the editor, like the Command Palette.
 
 atom-panel.modal {
+  margin-top: 10%;
+  padding-top: 12px;
   border: 1px solid @overlay-border-color;
-  border-top: none;
+  border-radius: 5px 5px 5px 5px !important;
+  // border-top: none;
   box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+  width: 600px;
 }

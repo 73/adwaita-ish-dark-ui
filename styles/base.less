@@ -15,8 +15,101 @@ body {
 }
 
 atom-pane {
-  border-right: 1px solid @base-border-color;
-  &:last-child {
-    border-right: none;
+  border: 1px solid #161616;
+  // &:last-child {
+  //   border-right: none;
+  // }
+}
+
+
+.atom-dock-resize-handle.left, .atom-dock-resize-handle.right {
+  width: 1px;
+}
+
+.settings-view {
+  .package-card {
+    background-color: @background-color-dark;
+    border-radius: 3px;
+  }
+  .sub-section .sub-section-heading {
+    background-color: @background-color-light;
+  }
+  select.form-control {
+    background-color: @background-color-dark;
+  }
+  .sub-section .sub-section-body {
+    border-left-color: none;
+  }
+
+}
+
+.panels-item {
+  background-color: @background-color-light;
+}
+
+
+atom-text-editor,
+.line-number,
+atom-text-editor .gutter,
+.custom-decorations {
+  background-color: @background-color-content;
+}
+
+// atom-pane-resize-handle {
+//   background-color: pink;
+//   border-bottom-width: 1px;
+// }
+
+
+.editor .selection .region {
+  background-color: fade(@light5, 25%) !important;
+}
+
+.line-number.selection {
+  color: @light2 !important;
+  opacity: 1;
+  font-weight: bold;
+}
+
+@cursor-line-background-color: fade(white, 8%);
+
+.line.cursor-line {
+  background: @cursor-line-background-color !important;
+  // background-color: @dark4 !important;
+}
+
+.line-number.cursor-line {
+  color: @light5 !important;
+  opacity: 1;
+  font-weight: bold;
+  background: @cursor-line-background-color !important;
+  // background-color: @dark4 !important;
+}
+
+.line-number.bookmarked {
+  color: @chameleon !important;
+  opacity: 1;
+  font-weight: bold;
+}
+
+// .editor.is-focused  .selection .region {
+// background-color: yellow;
+// }
+
+
+// makes the seperators look pretty
+atom-pane-container {
+  atom-pane-axis.vertical > atom-pane-resize-handle:before {
+    background-color: @inset-panel-background-color;
+    height: 3px;
+    border-top: 2px solid @button-border-color;
+  }
+  atom-pane-axis.horizontal > atom-pane-resize-handle:before {
+    background-color: @inset-panel-background-color;
+    border-left: 2px solid @button-border-color;
+    width: 3px;
+  }
+  .pane {
+    border: solid 1px @button-border-color;
   }
 }
