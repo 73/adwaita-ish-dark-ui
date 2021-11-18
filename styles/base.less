@@ -1,13 +1,8 @@
-
 // Base
 // -------------------
-
 // Used for global styles
 // Or to override certain Atom core styles
-
 // -------------------
-
-
 body {
   font-size: @font-size;
   color: @text-color;
@@ -21,8 +16,8 @@ atom-pane {
   // }
 }
 
-
-.atom-dock-resize-handle.left, .atom-dock-resize-handle.right {
+.atom-dock-resize-handle.left,
+.atom-dock-resize-handle.right {
   width: 1px;
 }
 
@@ -31,35 +26,34 @@ atom-pane {
     background-color: @background-color-dark;
     border-radius: 3px;
   }
+
   .sub-section .sub-section-heading {
     background-color: @background-color-light;
   }
+
   select.form-control {
     background-color: @background-color-dark;
   }
+
   .sub-section .sub-section-body {
     border-left-color: none;
   }
-
 }
 
 .panels-item {
   background-color: @background-color-light;
 }
 
-
-atom-text-editor,
+.custom-decorations,
 .line-number,
-atom-text-editor .gutter,
-.custom-decorations {
+atom-text-editor,
+atom-text-editor .gutter {
   background-color: @background-color-content;
 }
-
 // atom-pane-resize-handle {
 //   background-color: pink;
 //   border-bottom-width: 1px;
 // }
-
 
 .editor .selection .region {
   background-color: fade(@light5, 25%) !important;
@@ -70,7 +64,6 @@ atom-text-editor .gutter,
   opacity: 1;
   font-weight: bold;
 }
-
 @cursor-line-background-color: fade(white, 8%);
 
 .line.cursor-line {
@@ -91,12 +84,9 @@ atom-text-editor .gutter,
   opacity: 1;
   font-weight: bold;
 }
-
 // .editor.is-focused  .selection .region {
 // background-color: yellow;
 // }
-
-
 // makes the seperators look pretty
 atom-pane-container {
   atom-pane-axis.vertical > atom-pane-resize-handle:before {
@@ -104,11 +94,13 @@ atom-pane-container {
     height: 3px;
     border-top: 2px solid @button-border-color;
   }
+
   atom-pane-axis.horizontal > atom-pane-resize-handle:before {
     background-color: @inset-panel-background-color;
     border-left: 2px solid @button-border-color;
     width: 3px;
   }
+
   .pane {
     border: solid 1px @button-border-color;
   }

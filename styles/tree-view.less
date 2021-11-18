@@ -1,10 +1,15 @@
-
 // Tree View
 // -------------------
-
 // Used to explore and open files in the current project.
 // Overrides: atom/tree-view
 
+atom-workspace {
+  .is-blurred & {
+    .tree-view {
+      opacity: 0.5;
+    }
+  }
+}
 
 .tree-view-resizer {
   border-right: 1px solid @base-border-color;
@@ -13,6 +18,7 @@
 .tree-view {
   color: @text-color;
   background-color: @tree-view-background-color;
+  padding-left: 5px;
 
   .list-item {
     height: @tree-view-item-size;
@@ -21,28 +27,48 @@
 
   .list-item.selected {
     color: @text-color;
-     // color: @text-color-selected;
+    // color: @text-color-selected;
   }
 
   .entry .selected::before {
-    background-color: @adwaita-dark-blue;
+    background-color: @blue5;
     height: 30px;
     margin-top: -2px;
+    font-weight: bold;
+  }
+
+  .status-ignored {
+    color: @dark2;
+  }
+
+  .status-added {
+    color: @green4;
+  }
+
+  .status-modified {
+    color: @orange2;
+  }
+
+  .status-removed {
+    color: @red4;
+  }
+
+  .status-renamed {
+    color: @purple3;
   }
 }
 
-
-.right .tab,
-.left .tab{
+.left .tab,
+.right .tab {
   font-weight: bold;
   // background-color: @ui-background !important;
   border-bottom: none !important;
-  .title{
+
+  .title {
     padding-left: 4px;
     text-align: left;
   }
 }
-
 
 .open-files-item {
   margin: 0;
@@ -50,7 +76,8 @@
   top: 50%;
 }
 
-.list-group .selected::before, .list-tree .selected::before {
+.list-group .selected::before,
+.list-tree .selected::before {
   height: 30px;
   margin-top: -1px;
 }
